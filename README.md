@@ -47,7 +47,7 @@ The following steps will provide a simple tutorial on how to produce predictions
 First, collect CoNLL format datasets. 
 <br>In this tutorial, we will download pre-processed BC5CDR benchmark dataset from [cambridgeltl/MTL-Bioinformatics-2016](https://github.com/cambridgeltl/MTL-Bioinformatics-2016/blob/master/data/BC5CDR-IOB) repository.
 ```bash
-export DATA_DIR=BC5CDR_test 
+export DATA_DIR=${HOME}/KAZU-NER-exp/BC5CDR_test # Please use absolute path to avoid some unexpected errors 
 mkdir -p ${DATA_DIR}
 wget -O ${DATA_DIR}/test.tsv https://github.com/cambridgeltl/MTL-Bioinformatics-2016/raw/master/data/BC5CDR-IOB/test.tsv
 ```
