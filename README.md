@@ -37,6 +37,7 @@ seqeval>=1.2.2
 Example CLI codes are in `example_run_ner.sh`.
 
 For example, the following codes (linux bash script) will produce prediction results and checkpoints in `${OUTPUT_DIR}`.
+<br>For the inference (eval time), the model is required to use `labels.txt` identical to the one used for training. Please download `labels.txt` from [here](https://huggingface.co/dmis-lab/KAZU-NER-module-distil-v1.0/resolve/main/labels.txt) and place it in `${DATA_DIR}` folder with train or test files.
 ```bash
 export DATA_DIR=tiny_resources
 
