@@ -24,9 +24,18 @@ Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
   year={2022}
 }
 ```
-
+<hr>
 
 ## How to train or evaluate a model.
+
+### Table of Contents
+- [Requirements](#requirements)
+- [Example codes](#example-codes)
+- [Dataset preparation](#dataset-preparation)
+- [How to eval KAZU\-NER model](#how-to-eval-kazu-ner-model)
+- [How to train your own model using the code](#how-to-train-your-own-model-using-the-code-multi-label-ner-setting)
+- [Known issues](#known-issues)
+- [Contact information](#contact-information)
 
 ### Requirements
 
