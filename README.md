@@ -1,11 +1,11 @@
-## Appendix code for: Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework 
-#### - Training and evaluating multi-label NER model (using soft-label setting) 
+## Multi-label token classification (using soft-label settings) - Modeling for NER task
+### Appendix code for: Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework (EMNLP 2022)
 
 <br>
 
 This repository presents the train and evaluation codes for the NER module used in the initial release of the KAZU (Korea University and AstraZeneca) framework.
 * For the framework, please visit https://github.com/AstraZeneca/KAZU
-* For details about the model, please see our paper entitled `Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework`.
+* For details about the model, please see our paper entitled `Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework (EMNLP 2022 Industry track)`.
 
 Our models are available on Hugging Face framework: 
 * [**KAZU-NER-module-distil-v1.0**](https://huggingface.co/dmis-lab/KAZU-NER-module-distil-v1.0): NER module for KAZU framework. Denoted as TinyBERN2 model in the paper. 
@@ -113,6 +113,17 @@ python3 run_ner.py \
  --use_probs
 ```
 
+You will see evaluation results from stdout:
+```
+### Eval results:
+# cell_type   : precision: 0.0000, recall: 0.0000, f1: 0.0000, number: 0.0000, accuracy: 0.9967
+# drug        : precision: 0.9452, recall: 0.8655, f1: 0.9036, number: 5383.0000, accuracy: 0.9892
+# disease     : precision: 0.7691, recall: 0.6625, f1: 0.7118, number: 4424.0000, accuracy: 0.9744
+# gene        : precision: 0.0000, recall: 0.0000, f1: 0.0000, number: 0.0000, accuracy: 0.9810
+# cell_line   : precision: 0.0000, recall: 0.0000, f1: 0.0000, number: 0.0000, accuracy: 0.9984
+# species     : precision: 0.0000, recall: 0.0000, f1: 0.0000, number: 0.0000, accuracy: 0.9945
+```
+The predictions (labels for tokens) are written in `${OUTPUT_DIR}/predictions.txt`.
 
 #### How to train your own model using the code (multi-label NER setting)
 ```bash
