@@ -42,7 +42,7 @@ seqeval>=1.2.2
 
 The following steps will provide a simple tutorial on how to produce predictions (and checkpoints if you are trying to train a model) in `${OUTPUT_DIR}`. All the codes are written in Linux bash script and tested on Ubuntu. 
 
-#### Dataset preparation
+### Dataset preparation
 
 First, collect CoNLL format datasets. 
 <br>In this tutorial, we will download pre-processed BC5CDR benchmark dataset from [cambridgeltl/MTL-Bioinformatics-2016](https://github.com/cambridgeltl/MTL-Bioinformatics-2016/blob/master/data/BC5CDR-IOB) repository.
@@ -79,7 +79,7 @@ wc -l ${DATA_DIR}/*
 
 Please prepare dev set using the same procedure. 
 
-#### How to eval KAZU-NER model
+### How to eval KAZU-NER model
 
 ```bash
 export BATCH_SIZE=256
@@ -125,7 +125,7 @@ You will see evaluation results from stdout:
 ```
 The predictions (labels for tokens) are written in `${OUTPUT_DIR}/predictions.txt`.
 
-#### How to train your own model using the code (multi-label NER setting)
+### How to train your own model using the code (multi-label NER setting)
 ```bash
 export BATCH_SIZE=256
 export GRAD_ACCUMLATION=4 
@@ -164,9 +164,14 @@ python3 run_ner.py \
 
 ```
 
+### Known issues
+
+* **FileNotFoundError: Unable to find '<FILE>' at <LOCATION>/KAZU-NER-module/prob_conll** :
+  <br>This error occurs when one of `--train_file`, `--validation_file`, or `--test_file` is missing from the location you pass through the command line argument.
+There is a minor issue about error log especially about the dataset folder path. We are working on this. The error message is sometimes not directly related to the error. 
+We suggest you to double check whether the required datasets (i.e. the location you pass to the script) are actully exist in the location (from our example codes,  ${DATA_DIR} folder).
 
 
-
-### Contact Information
+### Contact information
 For help or issues using the codes or model (NER module of KAZU) in this repository, please contact WonJin Yoon (`wonjin.info (at) gmail.com`) or submit a GitHub issue.
 
