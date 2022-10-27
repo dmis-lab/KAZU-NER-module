@@ -25,6 +25,7 @@ Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
 }
 ```
 
+
 ## How to train or evaluate a model.
 
 ### Requirements
@@ -166,9 +167,9 @@ python3 run_ner.py \
 
 ### Known issues
 
-* **FileNotFoundError: Unable to find '<FILE>' at <LOCATION>/KAZU-NER-module/prob_conll** :
+* **FileNotFoundError: Unable to find '\<FILE\>' at \<LOCATION\>/KAZU-NER-module/prob_conll** :
   <br>This error occurs when one of `--train_file`, `--validation_file`, or `--test_file` is missing from the location you pass through the command line argument.
-There is a minor issue about error log especially about the dataset folder path. We are working on this. The error message is sometimes not directly related to the error. 
+There is a minor issue about error log especially about the dataset folder path and we are working on this. The error message is sometimes not directly related to the error. 
 We suggest you to double check whether the required datasets (i.e. the location you pass to the script) are actully exist in the location (from our example codes,  ${DATA_DIR} folder).
 
 
