@@ -9,9 +9,10 @@ This repository presents the train and evaluation codes for the NER module used 
 
 Our models are available on Hugging Face framework: 
 * [**KAZU-NER-module-distil-v1.0**](https://huggingface.co/dmis-lab/KAZU-NER-module-distil-v1.0): NER module for KAZU framework. Denoted as TinyBERN2 model in the paper. 
-* TinyPubMedBERT (will be shortly available)
+* [**Tiny-sized PubMedBERT-v1.0**](https://huggingface.co/dmis-lab/TinyPubMedBERT-v1.0): Distillated [PubMedBERT (Gu et al., 2021)](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract).
+* [**Tiny-sized SapBERT-v1.0**](https://huggingface.co/dmis-lab/TinySapBERT-from-TinyPubMedBERT-v1.0): Tiny-sized (4-layer) biomedical entity representations (language model). Training of this weights are initiated from TinyPubMedBERT-v1.0 and trained using [SapBERT (Liu et al., 2021)](https://github.com/cambridgeltl/sapbert) scheme.
 
-
+We applied multi-label token classification settings for NER task to mitigate the problem from _nested entity_ recognition (Please check `Section 3.1 Model Architecture` of the paper).
 
 ### Citation info
 Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
