@@ -25,6 +25,7 @@ Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
   year={2022}
 }
 ```
+We would like to recommend you to additionally cite [PubMedBERT (Gu et al., 2021)](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract) or [SapBERT (Liu et al., 2021)](https://github.com/cambridgeltl/sapbert) if you use our release of a distillated version of such models.
 <hr>
 
 ## How to train or evaluate a model.
@@ -32,6 +33,7 @@ Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
 ### Table of Contents
 - [Requirements](#requirements)
 - [Example codes](#example-codes)
+- [Input data format](#input-data-format)
 - [Dataset preparation](#dataset-preparation)
 - [How to eval KAZU\-NER model](#how-to-eval-kazu-ner-model)
 - [How to train your own model using the code](#how-to-train-your-own-model-using-the-code-multi-label-ner-setting)
@@ -52,6 +54,17 @@ seqeval>=1.2.2
 (Example CLI codes are in `example_run_ner.sh`.)
 
 The following steps will provide a simple tutorial on how to produce predictions (and checkpoints if you are trying to train a model) in `${OUTPUT_DIR}`. All the codes are written in Linux bash script and tested on Ubuntu. 
+
+### Input data format
+![image](https://user-images.githubusercontent.com/13089179/202068143-315bd182-872b-4a1b-b495-efae957d7c82.png)
+The above image show an example of input format. The example sentences are collected from test datasets of NCBI-disease corpus [(Doğan et al., 2014)](https://pubmed.ncbi.nlm.nih.gov/24393765/).
+* Input data should be in tsv format **without a row for column names. In the image, column names are inserted to facilitate explanation**. 
+* Analogous to CoNLL format, each line includes a token (usually a word delimited by blank spaces or special charactors: e.g. line 15-17) and annotation information for the token. 
+* The datapoints (i.e. the sentences) are separated by a blank line (line 20 in the example).
+* The first column refers to tokens, and from the second to the column just before the last one indicates the probability of the token class, in the order of `labels.txt` that should be provided with the model (see [here](https://huggingface.co/dmis-lab/KAZU-NER-module-distil-v1.0/blob/main/labels.txt) for the KAZU-NER). 
+* The last column indicates a token class with the highest probability **which is for reference only and not used for the training**.
+
+As you can see in the line number 8-11, this input format can inform the model multiple token classes. In the example `ataxia-telangiectasia` is indicated as disease type entity and in the same time `ataxia-telangiectasia gene` is a gene type entity. (We apply a threshold value of 0.5 throughout the repo)
 
 ### Dataset preparation
 
