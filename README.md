@@ -58,7 +58,7 @@ The following steps will provide a simple tutorial on how to produce predictions
 ### Input data format
 
 ![image](https://user-images.githubusercontent.com/13089179/202068143-315bd182-872b-4a1b-b495-efae957d7c82.png)
-The above image show an example of input data. The example sentences are collected from test datasets of NCBI-disease corpus [(Doğan et al., 2014)](https://pubmed.ncbi.nlm.nih.gov/24393765/).
+The above image shows an example of input data. The example sentences are from test datasets of the NCBI-disease corpus [(Doğan et al., 2014)](https://pubmed.ncbi.nlm.nih.gov/24393765/) and we appended automatic annotations from predictions of one of our models.
 * Input data should be in tsv format **without a row for column names. In the image, column names are inserted to facilitate explanation**. 
 * Analogous to the CoNLL format, each line includes a token (usually a word delimited by blank spaces or special characters: e.g. line 15-17) and annotation information for the token. 
 * The datapoints (i.e. the sentences) are separated by a blank line (line 20 in the example).
