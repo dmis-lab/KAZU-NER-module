@@ -20,7 +20,7 @@ Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
 ```
 @inproceedings{YoonAndJackson2022BiomedicalNER,
   title={Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework},
-  author={Wonjin Yoon, Richard Jackson, Elliot Ford, Vladimir Poroshin, Jaewoo Kang},
+  author={Yoon, Wonjin and Jackson, Richard and Ford, Elliot and Poroshin, Vladimir and Kang, Jaewoo},
   booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   year={2022}
 }
