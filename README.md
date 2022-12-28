@@ -5,6 +5,7 @@
 
 This repository presents the train and evaluation codes for the NER module used in the initial release of the KAZU (Korea University and AstraZeneca) framework.
 * For the framework, please visit https://github.com/AstraZeneca/KAZU
+* For demo, please visit http://kazu.korea.ac.kr
 * For details about the model, please see our paper entitled `Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework (EMNLP 2022 Industry track)`.
 
 Our models are available on Hugging Face framework: 
