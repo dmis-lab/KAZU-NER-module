@@ -1,12 +1,12 @@
 ## Multi-label token classification (using soft-label settings) - Modeling for NER task
-### Appendix code for: Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework (EMNLP 2022)
+### Appendix code for: [Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework](https://aclanthology.org/2022.emnlp-industry.63) (EMNLP 2022)
 
 <br>
 
 This repository presents the train and evaluation codes for the NER module used in the initial release of the KAZU (Korea University and AstraZeneca) framework.
 * For the framework, please visit https://github.com/AstraZeneca/KAZU
-* For demo, please visit http://kazu.korea.ac.kr
-* For details about the model, please see our paper entitled `Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework (EMNLP 2022 Industry track)`.
+* For web demo, please visit http://kazu.korea.ac.kr
+* For details about the model, please see our paper entitled [`Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework (EMNLP 2022 Industry track)`](https://aclanthology.org/2022.emnlp-industry.63).
 
 Our models are available on Hugging Face framework: 
 * [**KAZU-NER-module-distil-v1.0**](https://huggingface.co/dmis-lab/KAZU-NER-module-distil-v1.0): NER module for KAZU framework. Denoted as TinyBERN2 model in the paper. 
@@ -17,13 +17,18 @@ We applied multi-label token classification settings for NER task to mitigate th
 
 ### Citation info
 Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
-<br>Please cite: (Full citation info will be announced soon)
+<br>Please cite the simplified version as following section or get [full citation info from the link](https://aclanthology.org/2022.emnlp-industry.63.bib):
 ```
 @inproceedings{YoonAndJackson2022BiomedicalNER,
-  title={Biomedical NER for the Enterprise with Distillated BERN2 and the Kazu Framework},
-  author={Yoon, Wonjin and Jackson, Richard and Ford, Elliot and Poroshin, Vladimir and Kang, Jaewoo},
-  booktitle={Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  year={2022}
+  title="Biomedical {NER} for the Enterprise with Distillated {BERN}2 and the Kazu Framework",
+  author="Yoon, Wonjin and Jackson, Richard and Ford, Elliot and Poroshin, Vladimir and Kang, Jaewoo",
+  booktitle="Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing: Industry Track",
+  month = dec,
+  year = "2022",    
+  address = "Abu Dhabi, UAE",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2022.emnlp-industry.63",
+  pages = "619--626",
 }
 ```
 We would like to recommend you to additionally cite [PubMedBERT (Gu et al., 2021)](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract) or [SapBERT (Liu et al., 2021)](https://github.com/cambridgeltl/sapbert) if you use our release of a distillated version of such models.
