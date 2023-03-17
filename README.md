@@ -17,7 +17,7 @@ We applied multi-label token classification settings for NER task to mitigate th
 
 ### Citation info
 Joint-first authorship of **Richard Jackson** and **WonJin Yoon**.
-<br>Please cite the simplified version using the following section, or find the [full citation information here](https://aclanthology.org/2022.emnlp-industry.63.bib)
+<br>Please cite the paper using the simplified citation format provided in the following section, or find the [full citation information here](https://aclanthology.org/2022.emnlp-industry.63.bib)
 ```
 @inproceedings{YoonAndJackson2022BiomedicalNER,
   title="Biomedical {NER} for the Enterprise with Distillated {BERN}2 and the Kazu Framework",
