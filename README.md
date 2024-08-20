@@ -77,6 +77,9 @@ As you can see in line number 8-11, this input format can train the model with m
 
 ### Dataset preparation
 
+<b>In this tutorial, we demonstrate how to evaluate our model [(KAZU-NER-module-distil-v1.0)](https://huggingface.co/dmis-lab/KAZU-NER-module-distil-v1.0), which has already been trained on our dataset (as specified in the paper). 
+The example scripts are provided for `test.tsv` only. Please process `train.tsv` and `dev.tsv` (or their equivalents) if you need the train or dev splits. You will need to modify the flags to train the model on your own dataset.</b>
+
 First, collect CoNLL format datasets. 
 <br>In this tutorial, we will download pre-processed BC5CDR benchmark dataset from [cambridgeltl/MTL-Bioinformatics-2016](https://github.com/cambridgeltl/MTL-Bioinformatics-2016/blob/master/data/BC5CDR-IOB) repository.
 ```bash
