@@ -1,4 +1,6 @@
-torch==1.8.2
-transformers==4.9.2
+# Please install PyTorch in advance.
+#torch==1.8.2
+
+transformers==4.10.3
 datasets==1.18.3
 seqeval>=1.2.2
