@@ -48,14 +48,15 @@ We would like to recommend you to additionally cite [PubMedBERT (Gu et al., 2021
 
 ### Requirements
 
-You can install libraries using `pip install -r requirements.txt`. <b>Please install PyTorch in advance.</b>
-Using Python v3.7.13 is strongly suggested for compatibility.
+* <b>Please install PyTorch before proceeding with the following steps.</b>
+* You can install libraries using `pip install -r requirements.txt`.
+* Using Python v3.7.13 is strongly suggested for compatibility.
 
 #### Troubleshooting Installation Errors
 If you encounter the error `error: can't find Rust compiler` while installing transformers, this may related to your python version.
 As noted in [this comment](https://github.com/huggingface/transformers/issues/2831#issuecomment-2107017678), older version of tokenizers are not compatible with newer version of python.
-<br><b>Recommended Solution:</b> Using Python v3.7.13 is suggested for compatibility.
-<br><b>Alternative Solution (Not Recommended):</b> Alternatively, you can use Python v3.10.12 and install the libraries using the following command:
+* <b>Recommended Solution:</b> Using Python v3.7.13 is suggested for compatibility.
+* <b>Alternative Solution (Not Recommended):</b> Alternatively, you can use Python v3.10.12 and install the libraries using the following command:
 ```bash
 # Tested torch version: torch==2.1.0 CUDA 12.1
 #pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
@@ -63,13 +64,9 @@ As noted in [this comment](https://github.com/huggingface/transformers/issues/28
 pip install transformers==4.16.2 tokenizers==0.12 datasets==1.18.3 seqeval==1.2.2
 ```
 
-### Test enveronment
-Codes are tested using Python v3.7.13 and following libraries. 
+<b>Tested version:</b> Codes are tested using Python v3.7.13 and following libraries. 
 ```
-torch==1.8.2
-transformers==4.9.2 
-datasets==1.18.3
-seqeval>=1.2.2
+torch==1.8.2, transformers==4.9.2, datasets==1.18.3, seqeval>=1.2.2
 ```
 
 ### Example codes
